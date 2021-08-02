@@ -1,0 +1,8 @@
+1. for version 2.3
+
+2. open public_html/lib/internal/Mageplaza/Facebook/Http/GraphRawResponse.php
+
+3. line no 107 //***  preg_match('|HTTP/\d\.\d\s+(\d+)\s+.*|', $rawResponseHeader, $match); 
+
+
+ 4. replace with  preg_match('/HTTP\/\d(?:\.\d)?\s+(\d+)\s+/',$rawResponseHeader, $match);
